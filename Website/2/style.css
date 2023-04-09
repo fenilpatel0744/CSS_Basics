@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu&display=swap");
+body {
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  background-color: black;
+}
+h1 {
+  text-align: center;
+  color: white;
+}
+h2 {
+  text-align: center;
+  color: #333333;
+}
+.container {
+  font-size: 20px;
+}
+section {
+  padding: 30px;
+  margin: 30px;
+  line-height: 1.4;
+}
+.section-inner-html {
+  color: #ee4e34;
+  background-color: #fcedda;
+  border: 2px solid black;
+  padding: 15px;
+}
+.section-inner-css {
+  color: #234e70;
+  background-color: #fbf8be;
+  border: 2px solid black;
+  padding: 15px;
+}
+.section-inner-js {
+  color: #2f3c7e;
+  background-color: #fbeaeb;
+  border: 2px solid black;
+  padding: 15px;
+}
+#html {
+  color: #ee4e34;
+  background-color: #fcedda;
+}
+#css {
+  color: #234e70;
+  background-color: #fbf8be;
+}
+#javascript {
+  color: #2f3c7e;
+  background-color: #fbeaeb;
+}
