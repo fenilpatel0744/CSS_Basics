@@ -1,0 +1,28 @@
+https://www.geeksforgeeks.org/what-does-the-cascading-portion-of-css-means/
+
+
+What is cascading in CSS?
+“Cascading” refers to the process of going through the style declarations and defining weight or importance to the styling rules that help the browser to select what rules have to be applied in times of conflict. 
+The conflict here refers to multiple rules that are applicable to a particular HTML element. 
+In such cases, we need to let the browser know what style needs to be applied to the element. 
+This is done by cascading down the list of style declarations elements.
+
+For example, if we have the below style:
+p{
+    color:white;
+}
+
+and we also have the following declaration below it or in another stylesheet that has been linked to the page:
+p{
+    color: black;
+}
+
+We have a conflict in color property here for the paragraph elements. 
+Here, the browser just cascades down to identify what is the most recent and most specific style and applies that. 
+Since we have the color:black; as the most specific declaration, the color black is applied to the paragraph elements. 
+Now if you want to ensure color white is applied to the paragraph, we can define weight to that style by adding !important as shown below:
+
+p{
+    color:white !important;
+}
+!important ensures that the property has the maximum weight in presence of other conflicting properties.

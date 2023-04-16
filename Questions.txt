@@ -1,0 +1,28 @@
+A stylesheet is a collection of CSS rules
+True - correct
+False
+
+
+A CSS rule can be applied to only one selector at a time.
+True
+False - correct
+
+
+A CSS rule has to be defined separately for each selector
+True
+False - correct
+
+Which CSS properties are a part of Box model?
+Content:  Actual Content of the box where the text or image is placed.
+Padding: Area surrounding the content (Space between the border and content).
+Border: Area surrounding the padding.
+Margin: Area surrounding the border.
+
+
+How to include CSS in the webpage?
+
+What are the different types of Selectors in CSS?
+
+Is it important to test the webpage in different browsers?
+It’s most important to test a website in different browsers when you’re first designing it, or when making major changes. 
+However, it’s also important to repeat these tests periodically, since browsers go through a lot of updates and changes.

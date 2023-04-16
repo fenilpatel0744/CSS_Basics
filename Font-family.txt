@@ -1,0 +1,16 @@
+Generic fonts
+It consists of group of similar looking font families.
+
+What is the need of generic fonts?
+Because our website will open on platforms like Android, MAC, windows, or Linux. 
+We used the window operating system to make the website. And we gave Arial font family. 
+Now if MAC is not containing Arial then it uses browser default fonts. 
+So for similar font families like Arial therefore we use generic font families.
+
+
+Font-family
+It takes only one particular font family.
+
+
+Font-family stack
+
