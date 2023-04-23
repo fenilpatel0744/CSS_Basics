@@ -2,6 +2,13 @@ https://www.geeksforgeeks.org/what-does-the-cascading-portion-of-css-means/
 
 
 What is cascading in CSS?
+
+The word cascading means that a style applied to a parent element will also apply to all children elements within the parent. 
+So, if you set the color of the body text to "blue", all headings, paragraphs, and other text elements within the body will also get the same color (unless you specify something else)!
+
+Cascading refers to the logic your browser uses to determine which CSS rulesets are the most important, especially when they conflict with each other. One of the simplest ways your browser does this is by paying attention to the order in which your rulesets appear. In short, if you create multiple rulesets with the same selectors and declarations, the last one in your stylesheet will be the most important to your browser. 
+
+
 “Cascading” refers to the process of going through the style declarations and defining weight or importance to the styling rules that help the browser to select what rules have to be applied in times of conflict. 
 The conflict here refers to multiple rules that are applicable to a particular HTML element. 
 In such cases, we need to let the browser know what style needs to be applied to the element. 
@@ -26,3 +33,8 @@ p{
     color:white !important;
 }
 !important ensures that the property has the maximum weight in presence of other conflicting properties.
+
+What is use of important in CSS?
+!important has a highest priority.
+The !important rule in CSS is used to add more importance to a property/value than normal. 
+In fact, if you use the !important rule, it will override ALL previous styling rules for that specific property on that element!
