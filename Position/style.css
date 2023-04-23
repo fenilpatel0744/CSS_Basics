@@ -33,13 +33,13 @@ h1 {
   top: 10px;
 }
 
-/* absolute: Positions the element relative to the positon of its first parent*/
+/* relative: Positions the element relative to its normal positon */
 #box3 {
   position: relative;
   left: 50px;
 }
 
-/* relative: Positions the element relative to its normal positon */
+/* absolute: Positions the element relative to the positon of its first parent*/
 #box4 {
   position: absolute;
   bottom: 10px;
