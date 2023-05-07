@@ -1,0 +1,25 @@
+/* .table__body {
+  width: 95%;
+  background-color: #fffb;
+
+  margin: 0.8rem auto;
+  border-radius: 0.6rem;
+} */
+
+table {
+  min-width: 70%;
+  margin: auto;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 1rem;
+  text-align: left;
+}
+
+thead th {
+  background-color: #d5d1defe;
+}
