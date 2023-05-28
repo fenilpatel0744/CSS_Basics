@@ -1,0 +1,20 @@
+What is the need of CSS display property?
+
+What is the purpose of the display: inline-block; property?
+
+What is the example of position fixed which we can see in website?
+
+What are the main components of the CSS box model?
+
+What is the difference between margin and padding in CSS?
+Margin controls the space outside the element, creating separation between the element and its 
+neighboring elements.
+Padding controls the space between the element's content and its border.
+
+Difference between position relative and absolute?
+
+position: relative;:
+When an element is positioned as relative, it remains in the normal flow of the document.
+
+position: absolute;:
+When an element is positioned as absolute, it is taken out of the normal flow of the document.
