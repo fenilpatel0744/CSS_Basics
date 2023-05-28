@@ -58,3 +58,41 @@ To summarize, the "scroll" value for background-attachment is used for scrolling
 the entire page or the <body> element, while the "fixed" value fixes the background image in the viewport. 
 Scrolling within a specific element can be achieved by using the overflow property in combination with 
 appropriate CSS rules.
+
+
+
+
+Is there any need a background attachment fixed when we are are trying to do a background position center 
+in css
+
+No, there is no specific need to use background-attachment: fixed when you are setting the 
+background-position to center in CSS. These two properties serve different purposes.
+
+background-position: center is used to horizontally and vertically center the background image within 
+its container. It ensures that the image is centered regardless of the container's dimensions.
+
+background-attachment: fixed is used to fix the background image in place while scrolling the content. 
+This means that the background image will remain fixed relative to the viewport and won't move as you 
+scroll through the page.
+
+While you can use both properties together if you desire, it's not a requirement. You can center a 
+background image without using background-attachment: fixed. The choice of using background-attachment: 
+fixed depends on the specific effect you want to achieve. If you want the background image to remain fixed 
+while the content scrolls, you can use background-attachment: fixed. If you don't need this effect, 
+you can omit it and still center the background image using background-position: center.
+
+
+
+
+Display inline block then margin left and margin right auto is working?
+No, when an element is set to display: inline-block, applying margin-left: auto and margin-right: auto 
+will not center the element horizontally.
+
+The margin: auto property works to center block-level elements horizontally by distributing the remaining 
+space equally on both sides of the element. However, it doesn't work on inline or inline-block elements 
+because they are treated as inline elements, and their widths are determined by their content.
+
+To horizontally center an inline-block element, you can use other techniques such as wrapping the element 
+inside a container with text-align: center applied, or using flexbox with the container set to display: flex 
+and justify-content: center.
+
