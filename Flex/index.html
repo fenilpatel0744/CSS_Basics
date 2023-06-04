@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox</title>
+    <style>
+      .flex-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        /* align-items: center; */
+        flex-wrap: nowrap;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        height: 300px;
+        border: 3px solid black;
+      }
+
+      .flex-item {
+        background: #dbc1c1;
+        padding: 5px;
+        width: 200px;
+        height: 150px;
+        line-height: 150px;
+        color: black;
+        font-weight: bold;
+        font-size: 3em;
+        text-align: center;
+        border: 1px solid black;
+      }
+
+      .item-3 {
+        order: 1;
+        /* flex-grow: 1; */
+      }
+
+      /*.item-7 {
+        flex-grow: 1;
+      }*/
+
+      .item-5 {
+        align-self: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="text-align: center">Flexbox</h1>
+    <ul class="flex-container">
+      <li class="flex-item item-1">1</li>
+      <li class="flex-item item-2">2</li>
+      <li class="flex-item item-3">3</li>
+      <li class="flex-item item-4">4</li>
+      <li class="flex-item item-5">5</li>
+      <li class="flex-item item-6">6</li>
+    </ul>
+    <!-- <ul class="flex-container" style="margin-top: 50px">
+      <li class="flex-item item-6">6</li>
+      <li class="flex-item item-7">7</li>
+      <li class="flex-item item-8">8</li>
+    </ul> -->
+  </body>
+</html>

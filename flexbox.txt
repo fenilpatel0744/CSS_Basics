@@ -1,0 +1,84 @@
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+Flexbox Layout (Flexible Box) 
+
+The main idea behind the flex layout is to give the container the ability to alter its items’ width/height 
+(and order) to best fill the available space (mostly to accommodate to all kind of display devices and screen 
+sizes). A flex container expands items to fill available free space or shrinks them to prevent overflow.
+
+
+Is it necessary to declare parent element in flex box?
+Yes, it is necessary to declare the parent element as a flex container in order to use flexbox. 
+The parent element acts as the container for the flex items and is responsible for establishing the flex 
+formatting context.
+
+
+Need of flexbox?
+It allows you to easily control the positioning and alignment of elements within a container, 
+both horizontally and vertically, without relying on floats, positioning, or table layouts.
+
+Flexbox focuses on one-dimensional layouts, either in a row or column. This makes it perfect for organizing 
+elements along a single axis, whether it's horizontally or vertically. It offers control over the 
+distribution of available space and the alignment of items within that axis.
+
+
+Main Axes
+The direction of the main axis is determined by the flex-direction property set on the container. 
+By default, the main axis runs horizontally from left to right
+Properties like justify-content and align-items are applied along the main axis to define the alignment 
+and spacing of items in that direction.
+
+
+Cross Axes
+Properties like align-items and align-self are applied along the cross axis to specify how flex items should 
+align vertically
+
+
+flex-direction by default row
+
+
+Use align-items when you want to vertically align flex items within the flex container. 
+
+
+Order is big than it comes at last position
+Yes, in CSS flexbox, you can give a negative value to the order property for flex items.
+
+maximum and minimum value of order in css flexbox
+
+In CSS flexbox, the order property accepts integer values to control the order in which flex items are displayed within a flex container. There is no specific maximum or minimum value defined for the order property. You can assign any integer value, positive or negative, to change the display order of flex items.
+
+
+
+The flex-grow property in CSS flexbox is used to control how flex items grow and distribute available space 
+along the main axis of the flex container when there is extra space available. It specifies the proportion 
+of the available space that each flex item should take up.
+
+The flex-grow property accepts a unitless value, which represents the flex grow factor. 
+This factor determines how much each flex item should grow relative to the other items. 
+By default, the value is set to 0, meaning the item does not grow and will only take up the space it needs 
+based on its content.
+
+
+For stretch - remove height
+
+
+
+flex-wrap -> flex container
+nowrap is by default
+
+
+
+align items vertically and justify content horizontally works in CSS flexbox?
+
+Yes, in CSS flexbox, the align-items property is used to align items vertically within a flex container, while the justify-content property is used to align items horizontally.
+
+
+what is the difference between align-items and align-self in CSS flex box
+
+In CSS flexbox, both align-items and align-self properties are used to control the alignment of flex items along the cross-axis. However, there is a key difference between the two:
+
+In summary, the main difference between align-items and align-self is the scope of application:
+
+align-items is set on the flex container and affects all flex items within that container. It defines the default alignment for all items in the flex container.
+
+align-self is set on individual flex items and overrides the alignment set by align-items for that specific item. It allows you to customize the alignment of individual flex items independently.

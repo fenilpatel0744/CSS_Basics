@@ -1,0 +1,47 @@
+If you are moving any object left to right or right to left then it is in x-axis
+
+If you are moving any object in top to bottom and bottom to top then it is in y-axis
+
+If you are moving any object to ahead or behind then it is z-axis
+
+
+What is a Z Index?
+Z Index (z-index) is a CSS property that defines the order of overlapping HTML elements. 
+Elements with a higher index will be placed on top of elements with a lower index.
+
+
+By default z-index is auto
+
+
+Can we use z-index without position property?
+No, the z-index property only works when the position property is set to a value other than static. 
+The position property is used to define how an element is positioned on the page, and it has several 
+possible values: static, relative, absolute, fixed, and sticky.
+
+
+Maximum value of z-index 
+The maximum value for the z-index property in CSS is 2147483647. This value represents the maximum positive 
+32-bit signed integer in JavaScript, and it is widely supported across modern browsers.
+
+
+Minimum value of z-index
+In CSS, there is no specific minimum value for the z-index property. You can use any integer value, 
+including negative numbers, as the z-index value.
+
+
+Why there is a need of position to use z-index?
+
+It is particularly useful when dealing with overlapping elements on a web page. 
+
+
+Why there is a need of position to use z-index?
+ChatGPT
+The z-index property is used to control the stacking order of positioned elements, such as elements with position: relative, position: absolute, or position: fixed. The z-index property determines which elements appear in front of or behind other elements when they overlap in the stacking context.
+
+The reason position is required when using z-index is because z-index only applies to positioned elements. By applying a positioning value (position: relative, position: absolute, or position: fixed), you create a new stacking context for the element and allow z-index to have an effect.
+
+When an element has a position value, it establishes a new stacking context with its own layering order. The z-index property then determines the order in which these positioned elements are stacked within their respective stacking contexts.
+
+Without a positioned element, there is no stacking context for z-index to work with, and the property would have no effect. In that case, elements are stacked based on their order in the document structure.
+
+So, to summarize, the position property is required in conjunction with z-index to create a stacking context for positioned elements, allowing you to control their stacking order and determine which elements appear in front of or behind others when they overlap.
