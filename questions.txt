@@ -1,0 +1,13 @@
+Prerequisite of z-index
+
+
+Values of overflow property
+
+
+possible parameters of linear-gradient()?
+
+The linear-gradient() function accepts the following parameters:
+
+direction (optional): Specifies the direction of the gradient line. It can be expressed using an angle (deg), or by using keywords like to top, to bottom, to left, to right, to top left, to top right, to bottom left, or to bottom right. The default value is to bottom, which creates a vertical gradient.
+
+color-stop1, color-stop2, ...: Specifies the colors and their positions along the gradient line. Each color-stop is defined by a color value followed by an optional position value. The color value can be any valid CSS color, such as a named color, hexadecimal value, RGB, or HSL value. The position value (optional) determines the location along the gradient line where the color-stop should be placed. It can be expressed as a percentage or a length value.
