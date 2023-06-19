@@ -1,5 +1,0 @@
-Difference between background-clip and background-origin?
-background-clip = for background-color
-background-origin = for background-image
-
-For horizontal and verticle alignment which property is used?
