@@ -1,0 +1,64 @@
+https://css-tricks.com/snippets/css/complete-guide-grid/
+
+https://www.w3schools.com/css/css_grid.asp
+
+
+CSS Grid Layout, is a two-dimensional grid-based layout system.
+
+Container
+
+1. display:grid
+
+
+2. grid-template-columns: value as width of each element
+
+If there are three divs then 200px 200px 200px 
+But what if I want to write it once and it effect to all div 
+So for that one function is used - repeat(repetitions, size);
+for three divs - repeat(3, 200px) or repeat(3, 1fr)
+what if I need same two divs so for that - repeat(2, 200px) 300px 
+
+For responsive, use fractional unit (fr)
+Because if container width is fixed then we need to calculate for every div, how many width we can give to one div,
+also possible that we provide gap between divs, so that is also need to calculate, it increases the complexity
+So use fr that calculate automatic, if we need to give second div two times of first div then use 2fr, 
+if we need to give third div three times of first div then use 3fr
+
+For fr use integer numbers, decimals are not valid.
+
+
+3. grid-template-rows: value as height of each element
+other same as columns
+
+
+4. grid-column-gap - gap between columns
+   grid-row-gap - gap between rows 
+   grid-gap - gap between both column and row 
+              A shorthand property for the grid-row-gap and grid-column-gap properties  
+
+   gap - A shorthand property for the row-gap and the column-gap properties 
+
+
+Implicit Grid
+
+    grid-auto-rows: 100px; Specifies a default row size
+    grid-auto-flow: column; Specifies how auto-placed items are inserted in the grid, by default row 
+    grid-auto-columns: 100px; Specifies a default column size
+
+Child
+
+1. grid-row-start
+2. grid-row-end
+----> shorthand of above ---- grid-row: start/end
+3. grid-column-start
+4. grid-column-end 
+----> shorthand of above ---- grid-column: start/end
+
+shorthand of above all 
+5. grid-area: grid-row-start/ grid-column-start/ grid-row-end/ grid-column-end 
+
+
+
+
+justify-self and justify-items control horizontal alignment at the item and container levels, respectively, while justify-content aligns the entire grid horizontally. 
+Similarly, align-self and align-items control vertical alignment at the item and container levels, respectively, while align-content aligns the entire grid vertically.
