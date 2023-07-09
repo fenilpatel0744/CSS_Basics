@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Data2Data</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarText"
+          aria-controls="navbarText"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <span class="navbar-text ms-auto">
+            Navbar text with an inline element
+          </span>
+        </div>
+      </div>
+    </nav>
+
+    <div class="search-container">
+      <div class="form-floating mt-4 mb-4 p-2">
+        <input type="text" class="form-control" placeholder="Search 1" />
+        <label for="floatingInput">Email address</label>
+      </div>
+      <div class="form-floating mt-4 mb-4 p-2">
+        <input type="text" class="form-control" placeholder="Search 2" />
+        <label for="floatingInput">Email address</label>
+      </div>
+      <div class="form-floating mt-4 mb-4 p-2">
+        <input type="text" class="form-control" placeholder="Search 2" />
+        <label for="floatingInput">Email address</label>
+      </div>
+      <div class="form-floating mt-4 mb-4 p-2">
+        <input type="text" class="form-control" placeholder="Search 4" />
+        <label for="floatingInput">Email address</label>
+      </div>
+      <div class="form-floating mt-4 mb-4 p-2">
+        <input type="text" class="form-control" placeholder="Search 5" />
+        <label for="floatingInput">Email address</label>
+      </div>
+      <div class="form-floating mt-4 mb-4 p-2">
+        <input type="text" class="form-control" placeholder="Search 6" />
+        <label for="floatingInput">Email address</label>
+      </div>
+    </div>
+    <div class="searchbtn">
+      <button class="button login__submit" id="search">
+        <span class="button__text">Search</span>
+      </button>
+      <button class="button login__submit" id="clear">
+        <span class="button__text">Clear Filter</span>
+      </button>
+    </div>
+
+    <main class="table">
+      <section class="table__body">
+        <table>
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Customer</th>
+              <th>Location</th>
+              <th>Date</th>
+              <th>Status</th>
+              <th>Amount</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Smith</td>
+              <td>Seoul</td>
+              <td>17 Dec, 2022</td>
+              <td>Delivered</td>
+              <td>$128.90</td>
+              <td><i class="bi bi-eye-fill"></i></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Smith</td>
+              <td>Kathmandu</td>
+              <td>27 Aug, 2023</td>
+              <td>Cancelled</td>
+              <td>$5350.50</td>
+              <td><i class="bi bi-eye-fill"></i></td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Smith</td>
+              <td>Tokyo</td>
+              <td>14 Mar, 2023</td>
+              <td>Shipped</td>
+              <td>$210.40</td>
+              <td><i class="bi bi-eye-fill"></i></td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Smith</td>
+              <td>New Delhi</td>
+              <td>25 May, 2023</td>
+              <td>Delivered</td>
+              <td>$149.70</td>
+              <td><i class="bi bi-eye-fill"></i></td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Smith</td>
+              <td>Paris</td>
+              <td>23 Apr, 2023</td>
+              <td>Pending</td>
+              <td>$399.99</td>
+              <td><i class="bi bi-eye-fill"></i></td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>Smith</td>
+              <td>London</td>
+              <td>23 Apr, 2023</td>
+              <td>Cancelled</td>
+              <td>$399.99</td>
+              <td><i class="bi bi-eye-fill"></i></td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>Smith</td>
+              <td>New York</td>
+              <td>20 May, 2023</td>
+              <td>Delivered</td>
+              <td>$399.99</td>
+              <td><i class="bi bi-eye-fill"></i></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-wrapper">
+        <div class="footer-logo">
+          <a href="#">
+            <img src="./Images/logo.png" alt="Data2Data" />
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
