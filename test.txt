@@ -1,0 +1,31 @@
+import java.util.Arrays;
+import java.util.Comparator;
+
+public class Main {
+    public static void main(String[] args) {
+        String[] words = {"Meritage DCE", "Hello", "hello", "Compass Test", "Meritage", "Compass"};
+
+        Arrays.sort(words, getCustomComparator("Meritage DCE", "Compass Test"));
+
+        // Print the sorted array
+        for (String word : words) {
+            System.out.println(word);
+        }
+    }
+
+    private static Comparator<String> getCustomComparator(String... priorityWords) {
+        return new Comparator<String>() {
+            @Override
+            public int compare(String s1, String s2) {
+                for (String priorityWord : priorityWords) {
+                    if (s1.equals(priorityWord)) {
+                        return -1; // s1 comes before s2
+                    } else if (s2.equals(priorityWord)) {
+                        return 1; // s2 comes before s1
+                    }
+                }
+                return s1.compareTo(s2); // For other words, use regular alphabetical order
+            }
+        };
+    }
+}
