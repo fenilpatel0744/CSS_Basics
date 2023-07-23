@@ -1,0 +1,7 @@
+All values of Display property
+
+How do I horizontally center elements using display: flex?
+To horizontally center elements within a flex container, apply justify-content: center 
+
+How do I vertically center elements using display: flex?
+To vertically center elements within a flex container, apply align-items: center
