@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Responsive Columns</title>
+    <style>
+      /* General styles */
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      /* Sidebar styles */
+      .sidebar {
+        background-color: #333;
+        padding: 20px;
+        transition: width 0.3s ease; /* Add transition for smooth animation */
+      }
+
+      .menu {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .menu li {
+        padding: 10px;
+      }
+
+      .menu a {
+        color: white;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        transition: color 0.3s ease;
+      }
+
+      .menu a i {
+        font-size: 1.2rem;
+        margin-right: 10px;
+      }
+
+      .menu a span {
+        display: inline-block;
+        margin-left: 10px;
+      }
+
+      .menu a:hover {
+        color: #ffc107;
+      }
+
+      /* Media query for collapsing sidebar and hiding text */
+      @media (max-width: 768px) {
+        .sidebar {
+          width: 60px; /* Adjust width to fit only icons */
+        }
+
+        .menu a {
+          display: none; /* Hide the text */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-2 sidebar">
+          <ul class="menu">
+            <li>
+              <a href="#"><i class="fa fa-home"></i> Home</a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-info"></i> About</a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-cogs"></i> Services</a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-envelope"></i> Contact</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-sm-10 content">
+          <!-- Your main content here -->
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit,
+            exercitationem. Accusantium quaerat fugit quod nostrum quos,
+            mollitia tempora. Fuga officia ipsum voluptatibus maxime deleniti
+            aut repudiandae, atque at omnis doloribus.
+          </p>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
