@@ -24,3 +24,7 @@ find the element
 some conditions
 verify that condition 
 use function to add this condition and finding elements
+
+
+Variant
+The "variant" prop is often used to specify different styles or appearances for components
