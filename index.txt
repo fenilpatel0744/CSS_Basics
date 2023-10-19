@@ -1,87 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-    />
-    <title>Two Containers with Vertical Line</title>
-    <style>
-      /* .left-panel {
-        border-right: 1px solid black; 
-        height: 200px;
-      } */
-      .vertical-divider {
-        border-right: 1px solid black;
-        height: 50%;
-        box-sizing: border-box;
-      }
-      .col-md-1 {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container-fluid min-vh-100" style="background-color: yellow">
-      <div class="row">
-        <div class="col-md-8">
-          <div
-            class="left-panel min-vh-100"
-            style="background-color: bisque"
-          ></div>
-        </div>
-        <div class="col-md-1">
-          <div class="vertical-divider"></div>
-        </div>
-        <div class="col-md-3">
-          <div
-            class="right-panel min-vh-100"
-            style="background-color: aquamarine"
-          ></div>
-        </div>
-      </div>
-    </div>
-  </body>
-</html>
+So It is highly customizable - means we can customize the components
+good performance - It is not using any third party libraries and it's independent 
+
+sx props 
+
+If we need to add css in html tags then how we can add? 
+Using style attribute, so here same thing as sx props
+But Can we add hover effect in inline css?
+No, but we can add hover effect in sx props here example mentioned
+We will see sx props examples in further session
+
+Now let's see the layout 
+Container
+Box
+Stack - What is flex ?
 
 
+Which tag is used in HTML for input fields?
 
 
+If we want to test something then which steps we need?
 
-
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-    />
-    <title>Bootstrap Containers</title>
-    <style></style>
-  </head>
-  <body>
-    <div class="container-fluid min-vh-100" style="background-color: brown">
-      <div class="row">
-        <div class="col-md-8">
-          <div
-            class="left-panel min-vh-100"
-            style="background-color: bisque"
-          ></div>
-        </div>
-        <div class="col-md-4">
-          <div
-            class="right-panel min-vh-100"
-            style="background-color: burlywood"
-          ></div>
-        </div>
-      </div>
-    </div>
-  </body>
-</html>
-
+find the element
+some conditions
+verify that condition 
+use function to add this condition and finding elements
