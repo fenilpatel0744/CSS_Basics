@@ -1,0 +1,103 @@
+Unit testing
+
+what is it 
+and why
+
+for react what is the pre requisite
+jest and react testing library 
+
+what is the jest and use of it
+Jest is a Javascript testing library(not only for React, but for any JS related framework or library).
+Jest is a test runner and is responsible for
+Finding Tests
+Running the tests
+Determining whether the tests pass or fail
+
+what is the react testing library and what is the use of it
+Provides virtual DOMs for tests - Any time we are running tests without a browser, 
+we need to have a virtual DOM so we can do things like click elements and we can see 
+if virtual DOM behaves like it should do (like changing colour of a div on a button click and so on)
+
+what is the difference between jest and react testing library
+
+what is the jest dom 
+
+what is the difference between jest and jest dom
+
+which are the function used for testing
+
+what are the matchers and how to use it 
+
+what are the queries and how to use it
+
+and then example 
+
+mock example - after use of axios
+ SyntaxError: Cannot use import statement outside a module
+ 
+ What is the use of transformIgnorePatterns?
+The transformIgnorePatterns option can be used to whitelist or blacklist files from being transformed 
+with babel.
+
+Difference betweetn test and it
+
+https://jestjs.io/docs/api#testname-fn-timeout
+
+They do the same thing, but their names are different and with that their interaction with the name 
+of the test.
+
+test
+
+What you write:
+
+describe('yourModule', () => {
+  test('if it does this thing', () => {});
+  test('if it does the other thing', () => {});
+});
+What you get if something fails:
+
+yourModule > if it does this thing
+it
+
+What you write:
+
+describe('yourModule', () => {
+  it('should do this thing', () => {});
+  it('should do the other thing', () => {});
+});
+What you get if something fails:
+
+yourModule > should do this thing
+So it's about readability not about functionality.
+
+In my opinion, it really has a point when it comes to read the result of a failing test that 
+you haven't written yourself. It helps to faster understand what the test is about.
+
+Some developer also shorten the Should do this thing to Does this thing which is a bit shorter and 
+also fits semantically to the it notation.
+
+
+Difference between userEvent and fireEvent
+Let's say I have to click on button, so what procedures for that 
+mouse hover
+mouse move
+mouse down
+focus
+mouse up
+click
+
+so this all done in userEvent but in fireEvent only click is called directly
+
+fireEvent neglects the other related events but userEvent execute all the events like what actually
+happens in the browser
+
+https://testing-library.com/docs/user-event/intro/#difference-to-fireevent
+
+
+
+we are rendering the page in beforeAll function but after each test the cleanup function call 
+automatic by jest which do the Unmounts React trees that were mounted with render, so after that there
+is no render is possible if we are using beforeAll because it calls once at starting, so for that we 
+need to stop the cleanup function for that we can use @testing-library/react/pure, 
+https://testing-library.com/docs/react-testing-library/setup/
+https://github.com/testing-library/react-testing-library/issues/541
