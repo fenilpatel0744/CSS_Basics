@@ -101,3 +101,12 @@ is no render is possible if we are using beforeAll because it calls once at star
 need to stop the cleanup function for that we can use @testing-library/react/pure, 
 https://testing-library.com/docs/react-testing-library/setup/
 https://github.com/testing-library/react-testing-library/issues/541
+
+
+
+// By calling jest.mock("axios");, you are telling Jest to replace the actual axios library with a mock or a fake implementation during your test.
+
+//   axios.get.mockResolvedValue({ data: mockResponseData }): This line of code specifies that when the axios.get function is called, it should return a resolved Promise with the specified value, which is an object containing a data property. This is typically how Axios responds to HTTP requests, returning data in the data property.
+
+  // In your test, mockResponseData is an array of mock data that simulates the data that Axios would retrieve from a server.
+  
