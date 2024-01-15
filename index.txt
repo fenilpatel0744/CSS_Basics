@@ -1,30 +1,55 @@
-So It is highly customizable - means we can customize the components
-good performance - It is not using any third party libraries and it's independent 
+The book's name is The Power Of Positive Thinking 
 
-sx props 
+Author - Norman Vincent Peale
 
-If we need to add css in html tags then how we can add? 
-Using style attribute, so here same thing as sx props
-But Can we add hover effect in inline css?
-No, but we can add hover effect in sx props here example mentioned
-We will see sx props examples in further session
+Nonfictional in nature, "The Power of Positive Thinking" is a self-help book
 
-Now let's see the layout 
-Container
-Box
-Stack - What is flex ?
+The Power Of Positive Thinking will show you that the roots of success lie in the mind and teach you how to believe in yourself, break the habit of worrying, and take control of your life by taking control of your thoughts and changing your attitude.
 
+There is one Quote related to happiness
+The way to happiness: keep your heart free from hate, and free your mind from worry. Live simple, expect little, give much. Scatter sunshine, forget yourself, think about others. 
 
-Which tag is used in HTML for input fields?
+There are 3 lessons to help you think more positively:
+
+1) Start with confidence and watch your problems shrink.
+2) Your world is nothing more than the thoughts you have about your experiences.
+3) To live worry-free, first imagine a worry-free life.
 
 
-If we want to test something then which steps we need?
+Lesson 1
+Believe in yourself and visualize your goals to see how small your problems are.
 
-find the element
-some conditions
-verify that condition 
-use function to add this condition and finding elements
+Yes, confidence is important, because if you feel inferior, you’ll act inferior. We know confidence alone doesn’t solve all problems.
 
+When you start a new job and go in on the first day, thinking no one will like you, that you’ll probably screw up and not fit in well, well guess what, you’ll behave in a way that makes sure it comes true! Even worse, when you then get the feedback that “you were right” this drives even more negative thoughts, thus starting a vicious cycle.
 
-Variant
-The "variant" prop is often used to specify different styles or appearances for components
+It is up to you to actively change your thoughts and believe that you can bring value wherever you go. The author suggests an exercise to help you do that, which happens to be backed by science.
+
+Visualize your goals and the positive outcomes you want. What should your life look like in 6 months? Which goals do you want to achieve? Then, contrast those by visualizing the problems and obstacles that you might face along the way.
+
+This is called mental contrasting and has been proven to cause changes in behavior that last for weeks with as little as a few minute's worth of exercise.
+
+Lesson 2: Your attitude determines your entire life.
+There is one quote for this: Your world is nothing more than the thoughts you have about your experiences.
+
+Of course, all the problems in your life are real. And yes, some of them might take a few years to solve, like debt, or a serious illness. But how you react to those problems is entirely up to you. You might not be able to solve those problems at the push of a button, but your attitude is something you can change from one second to the next.
+
+Your world, your reality, is only determined by what you think about everything you experience in life.
+
+For example, if you leave your house tomorrow morning, and are almost hit by a car, which breaks at the last second, you can treat this as a bad sign and spend the rest of the day walking around afraid of anything and everything. Alternatively, you can take this experience as a wonderful gift, a miracle even, and live your life to the fullest, enjoying every single second of the day and being grateful.
+
+Don’t choose negative thoughts, when you can choose positive ones. Ever.
+
+Lesson 3: Imagine your life free of worry to become less concerned about the future.
+Here’s a super meta hack for worrying less: Imagine yourself as a worry-free person in the future. Just imagining that you can live without worry will take a lot of your current worries away.
+
+Worry is a major source of stress, and thus often leads to heart disease and other sicknesses which cause your life expectancy to go down. So it is in your best interest to eliminate it, wherever possible.
+
+Close your eyes, look into the future, and imagine yourself a few months or years from now, living free from all the worries that currently plague you, and you’ll feel much better when you open your eyes again.
+
+The author calls this draining your mind and it’s especially helpful before going to sleep because then positive thoughts will sink into your subconscious, instead of negative ones.
+
+The power of positive thinking" reminds us of a simple lesson: the mind controls our destiny, guiding us to become whoever we want to be.
+
+Main message
+No matter how complex your problem is, nothing is insurmountable if you have a positive mindset. By staying calm, cultivating faith, and focusing on positive outcomes, you will be able to live a happy and healthy life.
