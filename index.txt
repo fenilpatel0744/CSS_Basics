@@ -53,3 +53,34 @@ The power of positive thinking" reminds us of a simple lesson: the mind controls
 
 Main message
 No matter how complex your problem is, nothing is insurmountable if you have a positive mindset. By staying calm, cultivating faith, and focusing on positive outcomes, you will be able to live a happy and healthy life.
+
+
+Automa
+
+Automa is a Chrome and Firefox browser extension used for browser automation. 
+It is used to do repetitive tasks in routine life,
+We don't need to write any code for this, just use blocks to make the workflow and run it 
+It can also take screenshots and also has logs to verify the execution
+
+Now let's see the installation part of this
+follow this link to open it and just add it to the Chrome or Firefox extension 
+
+Next is documentation of this
+Here, we can find all the details of every single block and how to use it but here we cannot find more examples, so we need to just take the block and use the trial-and-error method
+
+Now let's record a workflow
+Open the dashboard and click this icon
+now let's record the workflow for the AXES login 
+After recording we can see that blocks are arranged in flow and we can use this at any time just click on the execute button
+
+Now let's see the element selector 
+What is the selector anyone knows?
+Element selector is used to locate the elements
+There are two types of selector 
+CSS Selector like based on the CSS we can locate the element
+XPath 
+
+Now let's see the blocks
+The block is used to connect the flow
+There are six types of blocks 
+
