@@ -112,3 +112,35 @@ const [items, setItems] = useState([
   //     </ul>
   //   </div>
   // );
+
+
+
+Practical 1
+
+Create two lists. 
+Add a checkbox to list 1.
+Add a swap button if any checkbox is checked.
+Select the checkbox and click on the swap button, then list 1 item and swap it to the list 2 item for that index.
+
+
+Practical 2
+
+Create one drop-down 
+Based on the first dropdown value, the second dropdown would show
+
+
+Practical 3
+
+Create one list. 
+Every item has a checkbox and a remove button, but the remove button is displayed if the checkbox is selected.
+After clicking the remove button, the item will be removed.
+
+
+Practical 4
+
+Create three components - Home, About and User with navigation link
+Whenever user click on any link, the page navigate to that link
+
+Practical 5
+Design this given page 
+
