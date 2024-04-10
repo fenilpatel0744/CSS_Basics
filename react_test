@@ -1,0 +1,115 @@
+import React from 'react';
+import './style.css';
+import { useState } from 'react';
+
+export default function App() {
+  const [list1, setList1] = useState([
+    { title: 'Item 1', checked: false },
+    { title: 'Item 2', checked: false },
+    { title: 'Item 3', checked: false },
+  ]);
+
+  const [list2, setList2] = useState([
+    { title: 'Item A', checked: false },
+    { title: 'Item B', checked: false },
+    { title: 'Item C', checked: false },
+  ]);
+
+  const handleCheckbox = (index) => {
+    const updatedList1 = [...list1];
+    updatedList1[index].checked = !updatedList1[index].checked;
+    setList1(updatedList1);
+  };
+
+  const handleSwap = () => {
+    const updatedList1 = [...list1];
+    const updatedList2 = [...list2];
+    updatedList1.forEach((item, index) => {
+      if (item.checked) {
+        const temp = updatedList1[index].title;
+        updatedList1[index].title = updatedList2[index].title;
+        updatedList2[index].title = temp;
+      }
+    });
+    setList1(updatedList1);
+    setList2(updatedList2);
+  };
+  
+  // Check if any item in list1 is checked
+  const isAnyChecked = list1.some(item => item.checked);
+
+  return (
+    <div>
+      <div>
+        <h1>List 1</h1>
+        {list1.map((item, index) => {
+          return (
+            <li>
+              {' '}
+              <input
+                type="checkbox"
+                checked={item.checked}
+                onChange={() => handleCheckbox(index)}
+              />
+              {item.title}
+            </li>
+          );
+        })}
+      </div>
+
+      <div>
+        <h1>List 2</h1>
+        {list2.map((item) => {
+          return <li>{item.title}</li>;
+        })}
+      </div>
+
+      {isAnyChecked && <button onClick={handleSwap}>Swap</button>}
+    </div>
+  );
+}
+
+
+const [items, setItems] = useState([
+  //   { id: 1, text: "Item 1", showDeleteButton: false },
+  //   { id: 2, text: "Item 2", showDeleteButton: false },
+  //   { id: 3, text: "Item 3", showDeleteButton: false },
+  // ]);
+
+  // const handleDeleteButtonClick = (id) => {
+  //   setItems(items.filter((item) => item.id !== id));
+  // };
+
+  // const handleCheckboxClick = (id) => {
+  //   setItems(
+  //     items.map((item) => {
+  //       if (item.id === id) {
+  //         return { ...item, showDeleteButton: !item.showDeleteButton };
+  //       }
+  //       return item;
+  //     })
+  //   );
+  // };
+
+  // return (
+  //   <div>
+  //     <h2>Todo List</h2>
+  //     <ul>
+  //       {items.map((item) => (
+  //         <li key={item.id}>
+  //           <input
+  //             type="checkbox"
+  //             checked={item.completed}
+  //             onClick={() => handleCheckboxClick(item.id)}
+  //           />
+  //           {item.text}
+  //           {item.showDeleteButton && (
+  //             <button onClick={() => handleDeleteButtonClick(item.id)}>
+  //               Delete
+  //             </button>
+  //           )}
+  //         </li>
+  //       ))}
+  //     </ul>
+  //   </div>
+  // );
