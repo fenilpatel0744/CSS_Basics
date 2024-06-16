@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"
+      integrity="sha512-aNMyYYxdIxIaot0Y1/PLuEu3eipGCmsEUBrUq+7aVyPGMFH8z0eTP0tkqAvv34fzN6z+201d3T8HPb1svWSKHQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.js"
+      integrity="sha512-FSNQjUUq97PtDnAJyMlBTH8EhV4o5X5FLVbzS9ttrdEVVbmrssJBh/PgXFQbxS+6yYx5n5irOj7de6Th0TRQZA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="face">
+        <div class="eyes">
+          <div class="eye">
+            <div class="goggles"></div>
+          </div>
+          <div class="eye">
+            <div class="goggles"></div>
+          </div>
+        </div>
+      </div>
+      <h2><span>Anime Js</span><br />Welcome</h2>
+    </div>
+
+    <script>
+      const container = document.querySelector(".container");
+      for (var i = 0; i <= 50; i++) {
+        const blocks = document.createElement("div");
+        blocks.classList.add("block");
+        container.appendChild(blocks);
+      }
+
+      function animateBlocks() {
+        anime({
+          targets: ".block",
+          translateX: function () {
+            return anime.random(-700, 700);
+          },
+          translateY: function () {
+            return anime.random(-500, 500);
+          },
+        });
+      }
+
+      animateBlocks();
+
+      document.querySelector("body").addEventListener("mousemove", eyeball);
+
+      function eyeball() {
+        "use strict";
+        var eye = document.querySelectorAll(".eye");
+        eye.forEach(function (eye) {
+          let x = eye.getBoundingClientRect().left + eye.clientWidth / 2;
+          let y = eye.getBoundingClientRect().top + eye.clientHeight / 2;
+          let radian = Math.atan2(event.pageX - x, event.pageY - y);
+          let rot = radian * (180 / Math.PI) * -1 + 270;
+          eye.style.transform = "rotate(" + rot + "deg)";
+        });
+      }
+    </script>
+  </body>
+</html>
+
+body {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: white;
+}
+.container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h2 {
+  color: black;
+  text-align: center;
+  font-size: 12vw;
+  line-height: 0.6em;
+  z-index: 1000;
+  font-weight: 900;
+}
+h2 span {
+  font-size: 0.2em;
+  letter-spacing: 0.4em;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.block {
+  position: absolute;
+  width: 50px;
+  height: 100px;
+  background: white;
+  box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.2);
+}
+.face {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: #ffcd00;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.1;
+}
+.face::before {
+  content: "";
+  position: absolute;
+  top: 180px;
+  width: 150px;
+  height: 70px;
+  background: #b57700;
+  border-bottom-left-radius: 70px;
+  border-bottom-right-radius: 70px;
+  transition: 0.5s;
+}
+.face:hover::before {
+  top: 210px;
+  width: 150px;
+  height: 20px;
+  background: #b57700;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+.eyes {
+  position: relative;
+  top: -40px;
+  display: flex;
+}
+.eyes .eye {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  display: block;
+  background: #fff;
+  margin: 0 15px;
+  border-radius: 50%;
+}
+.eyes .eye::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 25px;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  background: #000;
+  border-radius: 50%;
+}
+.face:hover {
+  background: rgb(255, 96, 96);
+}
+.face:hover::before {
+  background-color: black;
+}
