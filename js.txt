@@ -1,0 +1,201 @@
+############################ Write a program to reverse a given string
+
+let str = prompt("Please enter string to reverse:");
+
+// Check for null or empty input
+if (str === null || str.trim() === "") {
+  console.log("No input provided.");
+} else {
+  let reversedArray = [];
+  
+  for (let i = str.length - 1; i >= 0; i--) {
+    reversedArray.push(str[i]);
+  }
+
+  let reversedStr = reversedArray.join('');
+  console.log("Reversed string:", reversedStr);
+  
+  //inbuilt method
+  // let reversedStr = str.split('').reverse().join('');
+}
+
+
+
+
+######################### Given an array of numbers write a function to find the largest and smallest number of array
+
+const a = [1, 5, 3, 7, 4,6,11]
+let b
+
+// a.sort();
+// console.log(a.sort())
+
+for(let i=0; i<a.length-1; i++){
+  for(let j=i+1; j<a.length; j++){
+    
+    if(a[i] > a[j]){
+      temp = a[i]
+      a[i] = a[j]
+      a[j] = temp
+    }
+  }
+}
+console.log(a)
+
+console.log("Smallest number from given array: "+a[0]);
+console.log("Largest number from given array: "+a[a.length-1]);
+
+
+
+##################### Write a function to remove all falsy values from an array
+
+let value = ["", false, null, undefined, 0, NaN];
+
+let arr = [1, false, 3, "", 4, 6, 11];
+
+arr = arr.filter(item => !value.includes(item));
+
+console.log(arr);
+
+
+
+
+######################## Given a string s, find the length of longest substring without repeating substring
+
+function generateSubstrings(str) {
+  let substrings = [];
+  
+  // Loop over the starting index of the substring
+  for (let start = 0; start < str.length; start++) {
+    let charSet = new Set(); // Reset the charSet for each new start index
+    
+    // Loop over the ending index of the substring
+    for (let end = start; end < str.length; end++) {
+      let char = str[end];
+      console.log(char);
+      console.log(charSet);
+      // Check if the character is already in the charSet
+      if (charSet.has(char)) {
+        break; // Exit the loop early if a repeat is found
+      }
+      
+      charSet.add(char); // Add the character to the charSet
+      substrings.push(str.substring(start, end + 1)); // Add the valid substring
+    }
+  }
+  
+  return substrings;
+}
+
+let str = "abcabcb";
+let result = generateSubstrings(str);
+
+// Find the length of the longest substring
+let maxLength = result.reduce((max, element) => {
+  return Math.max(max, element.length);
+}, 0);
+
+console.log(maxLength); // Output: 3 (Expected: Length of "wke")
+console.log(result); // Output: ["p", "pw", "pww", "w", "wk", "wke", "k", "ke", "e"]
+
+
+
+############################### Given an integer array nums, rotate the array to the right by k steps, where
+k is non negative without using the inbuilt methods
+
+
+function rotateArray(arr, k) {
+  let arr1 = [];
+  let arr2 = [];
+  
+  for(let i=0; i<arr.length; i++){
+    if(arr.length % 2 === 0){
+      if(i > k-1){    
+       arr2.push(arr[i]); 
+      }else{
+       arr1.push(arr[i]);
+      }
+    }else{
+      if(i >= k+1){
+         arr2.push(arr[i]); 
+      }else{
+         arr1.push(arr[i]);
+      }
+    }
+    
+  }
+  console.log(arr1)
+  console.log(arr2);
+  
+  mergedArray = [...arr2, ...arr1];
+  
+  return mergedArray;
+}
+
+let arr = [1,2,3,4,5,6,7];  
+let k = 3;
+let result = rotateArray(arr, k);
+console.log(result);
+
+
+
+
+##################### Given a string write a function to count the occurrences of each character in the string return objects
+
+const count = (str) => {
+  let charCount = {};
+  
+  for (let char of str) {
+    if (char !== ' ') {
+      if (charCount[char]) {
+        charCount[char]++;
+      } else {
+        charCount[char] = 1;
+      }
+    }
+  }
+  return charCount;
+};
+
+let str = "hello world";
+let result = count(str);
+console.log(result); 
+
+console.log(Object.values(result))
+
+console.log(Object.keys(result))
+
+
+
+
+
+
+########################## Write a function that takes an array of objects, and a key and return a new array sorted in the based on the values of that key in ascending order
+
+const data = [
+  { name: 'jay' },
+  { name: 'ram' },
+  { name: 'dev' },
+  { name: 'meet' },
+  { name: 'ram' },
+];
+
+const sortData = (data, key) => {
+  if (key === 'name') {
+    return data.sort((a, b) => {
+      if (a.name > b.name) {
+        return 1; 
+      } else if (a.name < b.name) {
+        return -1; 
+      } else {
+        return 0; 
+      }
+    });
+  }
+  return data; 
+};
+
+const result = sortData(data, 'name');
+console.log(result);
+
+
