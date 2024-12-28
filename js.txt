@@ -199,3 +199,119 @@ const result = sortData(data, 'name');
 console.log(result);
 
 
+
+
+
+#############################################################
+let num=13
+let count = 0;
+for(let i=1; i<=13; i++){
+   count += i.toString().split('1').length - 1;
+}
+console.log(count);
+
+
+
+
+
+
+
+
+
+############################################################
+function calculateSum(target){
+  
+  let arr1=[]
+  let arr2=[]
+  let b=0;
+  let a=0;
+
+  for(let i=0; i<=arr.length-1; i++){
+    a = a + arr[i];
+    arr1.push(arr[i]);
+    if(a===target)
+      break;
+  }
+  console.log("Part 1: ",arr1)
+  let newArr = arr.slice(arr1.length);
+
+  for(let i=arr.length-1; i>=0; i--){
+    b = b + arr[i];
+    arr2.push(arr[i]);
+    if(b===target)
+      break;
+  }
+  arr2.reverse();
+  console.log("Part 2: ",arr2);
+  let newArr1 = newArr.slice(0, newArr.length-arr2.length);
+  console.log("Part 3: ",newArr1);
+}
+
+
+let arr = [0,2,1,-6,6,-7,9,1,2,0,1]
+let sum=0;
+
+for(let i=0; i<=arr.length-1; i++){
+  sum = sum+arr[i];
+}
+
+let target = sum/3;
+
+if(sum%3===0){
+   calculateSum(target);
+}else{
+  console.log("Not possible")
+}
+
+
+
+
+
+
+
+###########################################################
+function niceStr(str){
+  
+  let substrings = [];
+  // Loop over the starting index of the substring
+  for (let start = 0; start < str.length; start++) {
+    
+    // Loop over the ending index of the substring
+    for (let end = start; end < str.length; end++) {
+      substrings.push(str.substring(start, end + 1)); // Add the valid substring
+    }
+  }
+  return substrings;
+}
+
+
+let str = "abABB"
+
+if(str.length>1){
+  const result = niceStr(str);
+  let a=[];
+
+  for(let i=0; i<=result.length-1; i++){
+   if(result[i].length>1){
+    
+    for(let char of result[i]){
+      if ((char === char.toLowerCase() && result[i].includes(char.toUpperCase())) || (char === char.toUpperCase() && result[i].includes(char.toLowerCase()))) {
+           a.push(result[i]);
+           break;
+        }
+    }
+   }
+  }
+  console.log(a);
+
+  let maxLengthString = a.reduce((maxString, currentString) => {
+  return currentString.length > maxString.length ? currentString : maxString;
+  });
+  console.log(maxLengthString);
+}
+else{
+  console.log("Not possible")
+}
+
+
+
