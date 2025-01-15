@@ -10,13 +10,19 @@ function findOrCreateDir(parts, parentDir) {
 
     if (existingDir) {
         // If the directory exists, go deeper into the subDirs
-        return findOrCreateDir(parts.slice(1), existingDir);
+        let result = findOrCreateDir(parts.slice(1), existingDir);
+        console.log(`Found directory: ${currentPart} at index: ${result.index}`);  // Log the index
+        return result;
     } else {
         // If it doesn't exist, create the directory and add it to the parent
         let newDir = { dirName: currentPart, subDirs: [] };  // Create new directory with an empty subDirs array
         parentDir.subDirs = parentDir.subDirs || [];  // Ensure parent has a subDirs array
         parentDir.subDirs.push(newDir);  // Add the new directory to subDirs
-        return { dir: newDir, index: parentDir.subDirs.length - 1 };  // Return the newly created directory and its index
+
+        // Log the index where the directory is added
+        let index = parentDir.subDirs.length - 1;  
+        console.log(`Created directory: ${currentPart} at index: ${index}`);  // Log the index
+        return { dir: newDir, index: index };  // Return the newly created directory and its index
     }
 }
 
@@ -31,6 +37,7 @@ if (!rootDir) {
     // If root doesn't exist, create it
     rootDir = { dirName: 'appsuites', subDirs: [] };
     dirSuiteTextData.push(rootDir);  // Add "appsuites" to the root of dirSuiteTextData
+    console.log(`Created root directory: appsuites at index: 0`);  // Log the index of the root
 }
 
 // Start building the hierarchy from the root (typically "appsuites")
