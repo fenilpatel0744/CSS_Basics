@@ -1,0 +1,76 @@
+const fs = require('fs');
+const path = require('path');
+
+// Root directory to start traversal
+const rootDir = path.join(__dirname, 'appsuites');
+
+// Empty dirSuiteTextData that we will populate
+let dirSuiteTextData = [];
+
+// Function to check if a directory exists in dirSuiteTextData by its full path
+function findDirectoryIndex(fullPath) {
+  return dirSuiteTextData.findIndex((dir) => dir.fullPath === fullPath);
+}
+
+// Function to add directory with files and subdirectories
+function addDirectory(fullPath, dirName, files, subDirs) {
+  // Check if the directory is already in the data
+  const existingDirIndex = findDirectoryIndex(fullPath);
+
+  if (existingDirIndex === -1) {
+    // If the directory doesn't exist, create it
+    dirSuiteTextData.push({
+      fullPath, // full path of the directory
+      dirName,
+      files,
+      subDirs,
+    });
+    console.log(`Created new directory: ${fullPath}`);
+  } else {
+    // If the directory exists, append files and subdirectories
+    const existingDir = dirSuiteTextData[existingDirIndex];
+
+    // Add files
+    existingDir.files.push(...files);
+    console.log(`Added files to existing directory: ${fullPath}`);
+
+    // Add subdirectories
+    existingDir.subDirs.push(...subDirs);
+    console.log(`Added subdirectories to existing directory: ${fullPath}`);
+  }
+}
+
+// Function to traverse a directory and its subdirectories
+function traverseDirectory(dirPath, parentPath = '') {
+  const dirName = path.basename(dirPath);
+  const fullPath = path.join(parentPath, dirName); // Combine parent path and current dir to create full path
+  const files = [];
+  const subDirs = [];
+  
+  // Read the contents of the directory
+  const filesAndDirs = fs.readdirSync(dirPath); 
+
+  // Process each item in the directory
+  filesAndDirs.forEach(item => {
+    const itemPath = path.join(dirPath, item);
+    const stats = fs.statSync(itemPath);  // Get stats of the item (file or directory)
+    
+    if (stats.isDirectory()) {
+      // If it's a directory, recursively traverse it
+      subDirs.push(item);  // Store the subdirectory name
+      traverseDirectory(itemPath, fullPath); // Recurse into subdirectory
+    } else if (stats.isFile()) {
+      // If it's a file, add it to the 'files' array
+      files.push(item);
+    }
+  });
+
+  // Add the directory data to the global `dirSuiteTextData`
+  addDirectory(fullPath, dirName, files, subDirs);
+}
+
+// Start the traversal from the root directory
+traverseDirectory(rootDir);
+
+// Print the resulting `dirSuiteTextData`
+console.log(JSON.stringify(dirSuiteTextData, null, 2));
