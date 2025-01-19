@@ -1,0 +1,88 @@
+import * as React from 'react';
+import Box from '@mui/material/Box';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select, { SelectChangeEvent } from '@mui/material/Select';
+
+export default function BasicSelect() {
+  const [age, setAge] = React.useState('');
+
+  const handleChange = (event: SelectChangeEvent) => {
+    setAge(event.target.value as string);
+  };
+
+  return (
+    <Box sx={{ minWidth: 120 }}>
+      <FormControl fullWidth>
+        <InputLabel 
+          id="demo-simple-select-label" 
+          sx={{
+            fontSize: '14px', // Font size of the label
+            position: 'absolute', // Ensure the label is positioned properly
+            left: '10%', // Center horizontally
+            transform: 'translateX(-50%)', // Adjust left to make it truly centered
+            top: '50%', // Start the label in the middle of the select box
+            transform: 'translateY(-50%)', // Adjust vertical position to center it
+            '&.MuiInputLabel-shrink': {
+              top: '0px', // When floating, position it above the select box
+              fontSize: '12px', // Smaller font size when label is floating
+            },
+          }}
+        >
+          Age
+        </InputLabel>
+        <Select
+          labelId="demo-simple-select-label"
+          id="demo-simple-select"
+          value={age}
+          label="Age"
+          onChange={handleChange}
+          sx={{
+            height: '30px',        // Adjust the height of the select box
+            fontSize: '14px',      // Font size for select options
+            textAlign: 'center',   // Center the text inside the select box
+            '& .MuiSelect-icon': {
+              top: 'calc(50% - 12px)', // Adjust the icon position to be vertically centered
+            },
+            '& .MuiOutlinedInput-root': {
+              padding: '0 14px',   // Reduce padding inside the select
+            },
+          }}
+        >
+          <MenuItem value={10} sx={{ fontSize: '14px' }}>Ten</MenuItem>
+          <MenuItem value={20} sx={{ fontSize: '14px' }}>Twenty</MenuItem>
+          <MenuItem value={30} sx={{ fontSize: '14px' }}>Thirty</MenuItem>
+        </Select>
+      </FormControl>
+    </Box>
+  );
+}
+
+
+
+
+
+
+
+
+
+import * as React from 'react';
+import TextField from '@mui/material/TextField';
+import { useMediaQuery, useTheme } from '@mui/material';
+
+export default function ResponsiveTextField() {
+  const theme = useTheme();
+
+  // Media query for width 1366px and height 768px
+  const isSpecificResolution = useMediaQuery('(max-width: 1366px) and (max-height: 768px)');
+
+  return (
+    <TextField
+      id="outlined-basic"
+      label="Outlined"
+      variant="outlined"
+      size={isSpecificResolution ? 'small' : 'medium'} // Apply small size for specific resolution, otherwise medium
+    />
+  );
+}
