@@ -1,0 +1,135 @@
+Build a Vue.js app that allows users to submit their name, email, and feedback. After submission:
+
+Show the feedback details in a list
+
+Allow deletion of a feedback entry
+
+Prevent submission if fields are empty
+
+Features to Implement:
+Form with inputs: name, email, and feedback message.
+
+Validate that all fields are filled.
+
+Submit button to add the entry to a list.
+
+Show submitted feedback below the form.
+
+Each feedback should have a Delete button.
+
+Use ref, v-model, v-for, v-if, and @click.
+
+<script setup>
+import { ref } from "vue";
+
+// Reactive variables for form inputs
+const name = ref("");
+const email = ref("");
+const message = ref("");
+
+// Feedback list
+const feedbackList = ref([]);
+
+// Error message
+const error = ref("");
+
+// Submit handler
+const submitFeedback = () => {
+  if (!name.value || !email.value || !message.value) {
+    error.value = "All fields are required!";
+    return;
+  }
+
+  // Add feedback
+  feedbackList.value.push({
+    name: name.value,
+    email: email.value,
+    message: message.value,
+    id: Date.now(),
+  });
+
+  // Reset form
+  name.value = "";
+  email.value = "";
+  message.value = "";
+  error.value = "";
+};
+
+// Delete handler
+const deleteFeedback = (id) => {
+  feedbackList.value = feedbackList.value.filter((item) => item.id !== id);
+};
+</script>
+
+<template>
+  <main class="container">
+    <h1>User Feedback Form</h1>
+
+    <form @submit.prevent="submitFeedback">
+      <div>
+        <label>Name:</label>
+        <input v-model="name" type="text" placeholder="Enter name" />
+      </div>
+
+      <div>
+        <label>Email:</label>
+        <input v-model="email" type="email" placeholder="Enter email" />
+      </div>
+
+      <div>
+        <label>Message:</label>
+        <textarea v-model="message" placeholder="Enter feedback"></textarea>
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <p v-if="error" class="error">{{ error }}</p>
+
+    <h2 v-if="feedbackList.length">
+      Feedback Received ({{ feedbackList.length }})
+    </h2>
+    <p v-else>No feedback yet.</p>
+
+    <ul>
+      <li v-for="item in feedbackList" :key="item.id">
+        <strong>{{ item.name }}</strong> ({{ item.email }})
+        <p>{{ item.message }}</p>
+        <button @click="deleteFeedback(item.id)">Delete</button>
+      </li>
+    </ul>
+  </main>
+</template>
+
+<style scoped>
+.container {
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+  font-family: sans-serif;
+}
+input,
+textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+}
+button {
+  background-color: #42b983;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+}
+.error {
+  color: red;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+li {
+  border-bottom: 1px solid #ddd;
+  margin: 10px 0;
+}
+</style>
