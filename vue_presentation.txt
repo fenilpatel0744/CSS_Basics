@@ -1,0 +1,41 @@
+1. Which directive binds a variable to input?
+A. v-bind
+B. v-if
+C. v-model
+D. v-for
+✅ Answer: C. v-model
+
+
+🔁 Ideal Flow Recap:
+Introduction
+Installation
+Single File Component
+Directives
+Lifecycle Hooks
+Parent-Child Relationship
+✅ Options API vs Composition API (with side-by-side example)
+
+What is Vue.js
+
+Hello everyone, today I’ll be presenting one of the most popular frontend frameworks — Vue.js.
+Vue is a progressive JavaScript framework used to build interactive user interfaces and single-page applications.
+It was created by Evan You and focuses on being easy to learn, lightweight, and flexible.
+
+why should we use Vue over other frameworks like React or Angular?
+Here are some reasons:
+Simple Learning Curve – You can start using Vue with just HTML, CSS, and JS knowledge.
+Fast Development – Vue is extremely developer-friendly.
+Clear Separation of Concerns – Vue provides structure through components, but stays flexible.
+Lightweight and Performant – Small in size but fast in execution.
+Backed by a strong community and used in many production projects worldwide.
+
+Core Features of Vue.js
+
+Let’s now look at the core features Vue offers:
+✅ Component-Based Architecture – Break your UI into small, reusable pieces.
+✅ Reactivity – When data changes, your UI updates automatically.
+✅ Directives – Like v-if, v-for, and v-model to bind logic to your templates.
+✅ Lifecycle Hooks – Control logic at different stages of a component’s life.
+✅ Single File Components (.vue files) – Combine HTML, JS, and CSS in one file.
+✅ Vue Router – For building single-page applications with multiple views.
+✅ Vuex / Pinia – For state management across large applications.
